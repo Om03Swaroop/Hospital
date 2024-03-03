@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Accident Alert System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+                text-align: center;
+    </style>
+
+<div class="container">
+    </center><h1>Hospital Accident Alert System</h1>
+    <div id="accidentDetails">
+        <?php
+        // Check if form is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Store received accident details in variables
+            $name = $_POST["name"];
+            $location = $_POST["location"];
+            $description = $_POST["description"];
+
+            // Display the received accident details
+            echo "<p><strong>Name:</strong> $name</p>";
+            echo "<p><strong>Location:</strong> $location</p>";
+            echo "<p><strong>Description:</strong> $description</p>";
+
+            // Additional code to store the accident details in a database can be added here
+            // For simplicity, we are only displaying the details without storing them
+        }
+        ?>
+    </div>
+</div>
+
+</body>
+</html>
